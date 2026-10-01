@@ -1,0 +1,7 @@
+:root {
+  --gold: #b58b54; --gold-dark: #8f6838; --cream: #f6f0e7; --cream-2: #efe5d7;
+  --ink: #20252a; --slate: #2f4858; --muted: #667078; --white: #fff;
+  --success:#506c5a; --radius: 22px; --radius-sm: 14px;
+  --shadow: 0 18px 55px rgba(32,37,42,.13); --max: 1180px;
+  --serif: "Cormorant Garamond", Georgia, serif; --sans: "Montserrat", Arial, sans-serif;
+}

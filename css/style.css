@@ -532,22 +532,28 @@ h2 {
 
 .photo-note{
     position:absolute;
-    right:-25px;
-    bottom:30px;
+    right:24px;
+    bottom:24px;
 
-    max-width:245px;
-    padding:22px;
+    max-width:260px;
+    padding:24px;
 
-    background:rgba(248,244,236,.95);
+    background:rgba(243,231,213,.78);
+
     color:var(--ink);
 
-    backdrop-filter:blur(6px);
-    -webkit-backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:18px;
 
-    border:1px solid rgba(181,139,84,.15);
-    border-radius:var(--radius-sm);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
 
-    box-shadow:0 10px 25px rgba(0,0,0,.06);
+.photo-note strong{
+    display:block;
+
+    font-size:1.15rem;
+    font-weight:600;
+    line-height:1.5;
 }
 
 

@@ -530,21 +530,28 @@ h2 {
     box-shadow: var(--shadow);
 }
 
-.photo-note {
-    position: absolute;
-    right: -25px;
-    bottom: 30px;
+.photo-note{
+    position:absolute;
+    right:-25px;
+    bottom:30px;
 
-    max-width: 245px;
-    padding: 22px;
+    max-width:245px;
+    padding:22px;
 
-    color: var(--white);
-    background: var(--slate);
+    background:rgba(248,244,236,.95);
+    color:var(--ink);
 
-    border-radius: var(--radius-sm);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
 
-    box-shadow: var(--shadow);
+    border:1px solid rgba(181,139,84,.15);
+    border-radius:var(--radius-sm);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
 }
+
+
+
 
 .features {
     display: grid;
@@ -1559,3 +1566,4 @@ h2 {
     filter:
         drop-shadow(0 6px 18px rgba(0,0,0,0.25));
 }
+

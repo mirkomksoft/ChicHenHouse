@@ -759,179 +759,172 @@ h2 {
 
 
 /* =========================================================
-   TORINO TI ASPETTA - FLIP CARDS
+   TORINO TI ASPETTA - FLIP CARDS e GESTIONE ROTAZIONE DELLE CARD
    ========================================================= */
-
-.city-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-}
-
-.flip-card {
-    min-height: 420px;
-
-    perspective: 1200px;
-
-    cursor: pointer;
-    outline: none;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 420px;
-
-    transition:
-        transform 0.8s cubic-bezier(0.2, 0.75, 0.25, 1);
-
-    overflow: hidden;
-    border-radius: var(--radius);
-	
-	transform-style: preserve-3d;
-	will-change: transform;
-	
-}
-
-.flip-card.is-flipped .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-face {
-    position: absolute;
-    inset: 0;
-
-    display: flex;
-    align-items: flex-end;
-
-    overflow: hidden;
-
-    padding: 28px;
-
-    color: var(--white);
-
-    background-position: center;
-    background-size: cover;
-
-    border-radius: var(--radius);
-
-    box-shadow: 0 14px 40px rgba(32, 37, 42, 0.15);
-
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-	/*transform: translateZ(0);*/
-	
-}
-
-.flip-card-face::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(15, 20, 23, 0.1) 20%,
-            rgba(15, 20, 23, 0.9) 100%
-        );
-}
-.flip-card-front {
-    transform: rotateY(0deg);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-.flip-card-back {
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-
-
-.flip-card-back::before {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(22, 28, 32, 0.55) 0%,
-            rgba(22, 28, 32, 0.94) 100%
-        );
-}
-
-.flip-card-content {
-    position: relative;
-    z-index: 1;
-
-    width: 100%;
-}
-
-.flip-card-content h3 {
-    margin-bottom: 10px;
-
-    font-size: clamp(1.9rem, 3vw, 2.5rem);
-}
-
-.flip-card-content p {
-    margin: 0;
-
-    color: rgba(255, 255, 255, 0.88);
-
-    font-size: 0.88rem;
-    line-height: 1.65;
-}
-
-.flip-card-kicker {
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: #f2c879;
-
-    font-size: 0.65rem;
-    font-weight: 700;
-
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-}
-
-.flip-card-action {
-    display: inline-flex;
-    align-items: center;
-
-    margin-top: 18px;
-    padding: 8px 13px;
-
-    color: var(--white);
-    background: rgba(255, 255, 255, 0.12);
-
-    border: 1px solid rgba(255, 255, 255, 0.32);
-    border-radius: 999px;
-
-    font-size: 0.68rem;
-    font-weight: 700;
-
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-
-    transition:
-        color 0.25s ease,
-        background 0.25s ease;
-}
-
-.flip-card:hover .flip-card-action,
-.flip-card:focus-visible .flip-card-action {
-    color: var(--ink);
-    background: var(--white);
-}
-
-.flip-card:focus-visible {
-    border-radius: var(--radius);
-
-    box-shadow: 0 0 0 4px rgba(181, 139, 84, 0.35);
-}
-
+  
+   /* =========================================================
+      TORINO TI ASPETTA - FLIP CARDS
+      ========================================================= */
+   
+   .city-grid {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       gap: 18px;
+   }
+   
+   .flip-card {
+       min-height: 420px;
+   
+       perspective: 1200px;
+   
+       cursor: pointer;
+       outline: none;
+   }
+   
+   .flip-card-inner {
+       position: relative;
+   
+       width: 100%;
+       height: 100%;
+       min-height: 420px;
+   
+       transform-style: preserve-3d;
+   
+       transition:
+           transform 0.8s cubic-bezier(0.2, 0.75, 0.25, 1);
+   }
+   
+   .flip-card.is-flipped .flip-card-inner {
+       transform: rotateY(180deg);
+   }
+   
+   .flip-card-face {
+       position: absolute;
+       inset: 0;
+   
+       display: flex;
+       align-items: flex-end;
+   
+       overflow: hidden;
+   
+       padding: 28px;
+   
+       color: var(--white);
+   
+       background-position: center;
+       background-size: cover;
+   
+       border-radius: var(--radius);
+   
+       box-shadow: 0 14px 40px rgba(32, 37, 42, 0.15);
+   
+       backface-visibility: hidden;
+       -webkit-backface-visibility: hidden;
+   }
+   
+   .flip-card-face::before {
+       content: "";
+   
+       position: absolute;
+       inset: 0;
+   
+       background:
+           linear-gradient(
+               180deg,
+               rgba(15, 20, 23, 0.1) 20%,
+               rgba(15, 20, 23, 0.9) 100%
+           );
+   }
+   
+   .flip-card-back {
+       transform: rotateY(180deg);
+   }
+   
+   .flip-card-back::before {
+       background:
+           linear-gradient(
+               180deg,
+               rgba(22, 28, 32, 0.55) 0%,
+               rgba(22, 28, 32, 0.94) 100%
+           );
+   }
+   
+   .flip-card-content {
+       position: relative;
+       z-index: 1;
+   
+       width: 100%;
+   }
+   
+   .flip-card-content h3 {
+       margin-bottom: 10px;
+   
+       font-size: clamp(1.9rem, 3vw, 2.5rem);
+   }
+   
+   .flip-card-content p {
+       margin: 0;
+   
+       color: rgba(255, 255, 255, 0.88);
+   
+       font-size: 0.88rem;
+       line-height: 1.65;
+   }
+   
+   .flip-card-kicker {
+       display: block;
+   
+       margin-bottom: 8px;
+   
+       color: #f2c879;
+   
+       font-size: 0.65rem;
+       font-weight: 700;
+   
+       letter-spacing: 0.15em;
+       text-transform: uppercase;
+   }
+   
+   .flip-card-action {
+       display: inline-flex;
+       align-items: center;
+   
+       margin-top: 18px;
+       padding: 8px 13px;
+   
+       color: var(--white);
+       background: rgba(255, 255, 255, 0.12);
+   
+       border: 1px solid rgba(255, 255, 255, 0.32);
+       border-radius: 999px;
+   
+       font-size: 0.68rem;
+       font-weight: 700;
+   
+       backdrop-filter: blur(8px);
+       -webkit-backdrop-filter: blur(8px);
+   
+       transition:
+           color 0.25s ease,
+           background 0.25s ease;
+   }
+   
+   .flip-card:hover .flip-card-action,
+   .flip-card:focus-visible .flip-card-action {
+       color: var(--ink);
+       background: var(--white);
+   }
+   
+   .flip-card:focus-visible {
+       border-radius: var(--radius);
+   
+       box-shadow: 0 0 0 4px rgba(181, 139, 84, 0.35);
+   }
+   
+   
+/* =========================================================
+   FINE TORINO TI ASPETTA - FLIP CARDS e GESTIONE ROTAZIONE DELLE CARD
+   ========================================================= */
 
 /* =========================================================
    PERFETTO PER
@@ -1571,4 +1564,6 @@ h2 {
     font-weight:600;
     line-height:1.45;
 }
+
+
 

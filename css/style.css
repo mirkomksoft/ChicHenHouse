@@ -821,9 +821,6 @@ h2 {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 	
-	opacity: 1;
-	visibility: visible;
-	transition: opacity 0s linear 0.4s, visibility 0s linear 0.4s;
 }
 
 .flip-card-face::before {
@@ -842,17 +839,6 @@ h2 {
 
 .flip-card-back {
     transform: rotateY(180deg);
-	opacity: 0;
-	visibility: hidden;
-}
-.flip-card.is-flipped .flip-card-front {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.flip-card.is-flipped .flip-card-back {
-    opacity: 1;
-    visibility: visible;
 }
 
 

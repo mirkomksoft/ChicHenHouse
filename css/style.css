@@ -837,14 +837,18 @@ h2 {
             rgba(15, 20, 23, 0.9) 100%
         );
 }
-/*
 .flip-card-front {
     transform: rotateY(0deg);
-}*/
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
 
 .flip-card-back {
     transform: rotateY(180deg);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
+
 
 
 .flip-card-back::before {

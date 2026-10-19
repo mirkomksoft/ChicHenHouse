@@ -837,9 +837,10 @@ h2 {
             rgba(15, 20, 23, 0.9) 100%
         );
 }
+/*
 .flip-card-front {
     transform: rotateY(0deg);
-}
+}*/
 
 .flip-card-back {
     transform: rotateY(180deg);

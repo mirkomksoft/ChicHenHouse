@@ -840,6 +840,9 @@ h2 {
        transform: rotateY(180deg);
    }
    
+   .flip-card-front {
+    transform: rotateY(0deg);
+}
    .flip-card-back::before {
        background:
            linear-gradient(
